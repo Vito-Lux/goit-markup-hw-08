@@ -1,0 +1,42 @@
+//  Colors
+$main-text-color: #212121;
+$additional-text-color: #757575;
+$accent-color: #2196f3;
+$main-bg-color: #ffffff;
+$secondary-bg-color: #2f303a;
+$button-bg-color: #f5f4fa;
+$socials-main-color: #afb1b8;
+//  Linear-gradient
+$line-grad: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+//  Borders
+$header-border-color: #ececec;
+$portfolio-border-color: #eeeeee;
+//  Fonts
+$main-font: "Roboto", sans-serif;
+$secondary-font: "Raleway", sans-serif;
+//  Transition
+$transition-duration: 250ms;
+$transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//  Transform
+$transform-effect: scale(1.1, 1.2);
+//  Flexbox-gap
+$flexbox-gap: 30px;
+//  Font-size
+$font-standard-size: 14px;
+//  Font-weight
+$thin-font-weight: 100;
+$light-font-weight: 300;
+$regular-font-weight: 400;
+$medium-font-weight: 500;
+$bold-font-weight: 700;
+$black-font-weight: 900;
+//  Letter-spacing
+$base-letter-spacing: 0.03em;
+$pixel-letter-spacing: 1.08;
+//  Line-height
+$base-line-height: 1.2;
+$secondary-line-height: 1.87;
+$additional-line-height: 1.5;
+//  Layout-width
+$fullLayoutWidth: 1600px;
+$sidePadding: 200px * 2;

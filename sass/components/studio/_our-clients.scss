@@ -1,0 +1,37 @@
+.our-clients__title {
+  padding-bottom: 50px;
+  text-align: center;
+  @include fontLineWeightLetter(36, 42, bold, base);
+}
+
+.our-clients__list {
+  @include listFlexGap();
+}
+
+.our-clients__item {
+  @include alignFlexCenter();
+  @include itemFlexGap(6);
+
+  max-width: 170px;
+  max-height: 92px;
+}
+
+.our-clients__link {
+  padding: 16px 32px;
+  fill: $socials-main-color;
+  border: 1px solid $socials-main-color;
+  border-radius: 4px;
+
+  @include transitionRules(fill, border);
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border: 1px solid $accent-color;
+  }
+}
+
+.our-clients__img {
+  max-height: 60px;
+  max-width: 106px;
+}

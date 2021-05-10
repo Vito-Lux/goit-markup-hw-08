@@ -1,0 +1,69 @@
+.portfolio__list {
+  @include listFlexGap();
+}
+
+.portfolio__item {
+  @include itemFlexGap(3);
+
+  @include transitionRules(box-shadow);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.portfolio__item:last-child {
+  margin-right: 0;
+}
+
+// Overlay
+
+.portfolio__overlay {
+  position: relative;
+  overflow: hidden;
+
+  &-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    @include fontLineWeightLetter(18, 28, norm, base);
+    color: $main-bg-color;
+    background-color: $accent-color;
+
+    @include transitionRules(transform);
+
+    transform: translateY(100%);
+
+    opacity: 0.9;
+  }
+}
+
+.portfolio__item:hover .portfolio__overlay-text {
+  transform: translateY(0);
+}
+
+.portfolio-content {
+  @include columnFlexDirection();
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 24px;
+  border: 1px solid $portfolio-border-color;
+  border-radius: 0px 0px 4px 4px;
+  background-color: $main-bg-color;
+
+  &__subtitle {
+    font-family: $main-font;
+    @include fontLineWeightLetter(18, 36, bold, dbl);
+    color: $main-text-color;
+  }
+
+  &__text {
+    font-family: $main-font;
+    @include fontLineWeightLetter(16, 30, norm, base);
+    color: $additional-text-color;
+  }
+}

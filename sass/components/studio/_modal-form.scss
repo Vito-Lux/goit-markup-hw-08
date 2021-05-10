@@ -1,0 +1,110 @@
+.modal__form {
+  @include columnFlexDirection();
+}
+
+.modal__title {
+  padding: 40px 40px 6px 40px;
+  @include fontLineWeightLetter(20, 23, bold, base);
+  text-align: center;
+}
+
+.modal__label {
+  position: relative;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  @include fontLineWeightLetter(12, 14, norm, div);
+  color: $additional-text-color;
+}
+
+.modal__field {
+  @include columnFlexDirection();
+  min-width: 448px;
+  min-height: 40px;
+  margin-top: 4px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  @include transitionRules(border, outline);
+
+  &:hover,
+  &:focus {
+    outline: $accent-color;
+    cursor: pointer;
+    border: 1px solid $accent-color;
+  }
+}
+
+.modal__field:hover + .modal__field-img,
+.modal__field:focus + .modal__field-img {
+  @include transitionRules(fill);
+  fill: $accent-color;
+}
+
+.modal__field-img {
+  position: absolute;
+  top: 39px;
+  left: 50px;
+}
+
+.textarea {
+  display: flex;
+  min-width: 448px;
+  min-height: 120px;
+  resize: none;
+  margin-top: 4px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  @include transitionRules(border, outline);
+
+  &:hover,
+  &:focus {
+    outline: $accent-color;
+    cursor: pointer;
+    border: 1px solid $accent-color;
+  }
+}
+
+.modal__agreement {
+  @include verticalFlexCenter();
+  padding-top: 25px;
+}
+
+.modal__agreement-label::before {
+  content: "";
+  display: inline-flex;
+  height: 18px;
+  width: 18px;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-image: url("../images/icons.svg#icon-box");
+  background-color: rgba(24, 140, 232, 0.5);
+
+  @include transitionRules(background-image);
+}
+
+.modal__agreement-check:checked + .modal__agreement-label::before {
+  content: "";
+  background-image: url("../images/icon_check.svg");
+  background-size: contain;
+}
+
+.modal__agreement-label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.modal__agreement-link {
+  display: inline-flex;
+  padding-left: 4px;
+  text-decoration: underline;
+  color: $accent-color;
+}
+
+.modal__btn {
+  @include verticalFlexCenter();
+  padding-top: 30px;
+}

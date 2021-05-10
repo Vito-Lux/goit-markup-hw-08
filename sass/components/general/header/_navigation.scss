@@ -1,0 +1,51 @@
+.header-nav {
+  @include alignFlexCenter();
+}
+
+.header-nav__logo {
+  margin-right: 92px;
+  font-family: $secondary-font;
+  @include fontLineWeightLetter(26, 31, bold, base);
+
+  & span {
+    color: $accent-color;
+  }
+}
+
+.header-nav__list {
+  display: flex;
+}
+
+.header-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-nav__list li:last-child {
+  margin-right: 0;
+}
+
+.header-nav__link {
+  position: relative;
+  font-family: $main-font;
+  @include fontLineWeightLetter(14, 16, med, base);
+  color: $main-text-color;
+
+  @include transitionRules(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.header-nav__link:hover::after,
+.header-nav__link:focus::after,
+.current-link a::after {
+  content: "";
+  position: absolute;
+  top: 45px;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: $accent-color;
+}
