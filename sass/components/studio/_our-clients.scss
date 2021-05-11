@@ -1,3 +1,20 @@
+.our-clients {
+  @include forSize(minmob) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include forSize(mintab) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include forSize(minpc) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .our-clients__title {
   padding-bottom: 50px;
   text-align: center;
@@ -5,18 +22,43 @@
 }
 
 .our-clients__list {
+  @include forSize(minmob) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include forSize(mintab) {
+    display: flex;
+    justify-content: space-between;
+  }
+
   @include listFlexGap();
 }
 
 .our-clients__item {
   @include alignFlexCenter();
   @include itemFlexGap(6);
-
-  max-width: 170px;
-  max-height: 92px;
 }
 
 .our-clients__link {
+  @include forSize(minmob) {
+    width: 210px;
+    max-height: 92px;
+    @include centeredFlex(center);
+  }
+
+  @include forSize(mintab) {
+    width: 226px;
+    max-height: 92px;
+    @include centeredFlex(center);
+  }
+
+  @include forSize(minpc) {
+    width: 170px;
+    max-height: 92px;
+    @include centeredFlex(center);
+  }
+
   padding: 16px 32px;
   fill: $socials-main-color;
   border: 1px solid $socials-main-color;

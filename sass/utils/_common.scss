@@ -50,7 +50,23 @@ button {
 // CSS-common
 
 .container {
-  @include containerWidth(work);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include forSize(minmob) {
+    width: 480px;
+  }
+
+  @include forSize(mintab) {
+    width: 768px;
+  }
+
+  @include forSize(minpc) {
+    width: 1200px;
+  }
 }
 
 .section {

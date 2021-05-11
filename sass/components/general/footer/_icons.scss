@@ -1,14 +1,51 @@
 .footer__row {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  @include forSize(minmob) {
+    @include centeredFlex(center);
+    flex-direction: column;
+  }
+
+  @include forSize(mintab) {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include forSize(minpc) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 .footer__right-block {
-  padding-left: 70px;
+  @include forSize(minmob) {
+    padding-left: 0;
+  }
+
+  @include forSize(minpc) {
+    padding-left: 70px;
+  }
 }
 
 .footer-icons__text {
+  @include forSize(minmob) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include forSize(mintab) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include forSize(minpc) {
+    display: flex;
+    justify-content: flex-start;
+  }
+
   padding-top: 10px;
   @include fontLineWeightLetter(14, 16, bold, base);
   text-transform: uppercase;
@@ -16,8 +53,15 @@
 }
 
 .footer-icons__list {
-  @include alignFlexCenter();
-  padding-top: 20px;
+  @include forSize(minmob) {
+    padding-top: 20px;
+    display: flex;
+  }
+
+  @include forSize(minpc) {
+    @include alignFlexCenter();
+    padding-top: 20px;
+  }
 }
 
 .footer-icons__item:not(:last-child) {
@@ -35,6 +79,14 @@
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   fill: $main-bg-color;
+
+  @include forSize(minmob) {
+    margin-bottom: 60px;
+  }
+
+  @include forSize(minpc) {
+    margin-bottom: 0;
+  }
 
   @include transitionRules(background-color);
 

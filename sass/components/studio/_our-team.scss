@@ -1,7 +1,14 @@
 .our-team {
   background-color: $button-bg-color;
+}
 
-  & .container {
+.our-team .container {
+  @include forSize(minmob) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include forSize(minpc) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -15,11 +22,36 @@
 }
 
 .our-team__list {
+  @include forSize(minmob) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include forSize(mintab) {
+    display: flex;
+    justify-content: center;
+  }
+
   @include listFlexGap();
 }
 
 .our-team__item {
   @include itemFlexGap(4);
+
+  & img {
+    @include forSize(minmob) {
+      min-width: 450px;
+      min-height: 460px;
+    }
+    @include forSize(mintab) {
+      min-width: 354px;
+      min-height: 374px;
+    }
+    @include forSize(minpc) {
+      min-width: 270px;
+      min-height: 260px;
+    }
+  }
 }
 
 .our-team__list li:last-child {

@@ -1,4 +1,17 @@
 .footer__address {
+  @include forSize(minmob) {
+    @include centeredFlex(center);
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  @include forSize(minpc) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
   padding-bottom: 10px;
   @include fontLineWeightLetter(14, 24, norm, base);
   font-style: normal;
@@ -6,7 +19,16 @@
 }
 
 .footer-contacts__item a {
-  width: calc(100% / 12 * 8);
+  @include forSize(minmob) {
+    @include centeredFlex(center);
+  }
+
+  @include forSize(minpc) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   @include fontLineWeightLetter(14, 24, norm, base);
   color: $main-bg-color;
 
@@ -22,6 +44,7 @@
 
 .footer-contacts__item:first-child {
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .footer-contacts__item:last-child {

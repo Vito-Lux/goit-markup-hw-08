@@ -1,5 +1,12 @@
 .our-work .container {
-  padding-bottom: 94px;
+  @include forSize(minmob) {
+    display: none;
+  }
+
+  @include forSize(minpc) {
+    display: block;
+    padding-bottom: 94px;
+  }
 }
 
 .our-work__title {

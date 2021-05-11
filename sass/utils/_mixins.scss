@@ -140,18 +140,18 @@
 
 // Container
 
-@mixin containerWidth($layoutWidth) {
-   @if ($layoutWidth == "work") {
-      max-width: $fullLayoutWidth - $sidePadding;
-   } @else if ($layoutWidth == "full") {
-      max-width: $fullLayoutWidth;
-   }
+// @mixin containerWidth($layoutWidth) {
+//    @if ($layoutWidth == "work") {
+//       max-width: $fullLayoutWidth - $sidePadding;
+//    } @else if ($layoutWidth == "full") {
+//       max-width: $fullLayoutWidth;
+//    }
 
-   margin-left: auto;
-   margin-right: auto;
-   padding-left: 15px;
-   padding-right: 15px;
-}
+//    margin-left: auto;
+//    margin-right: auto;
+//    padding-left: 15px;
+//    padding-right: 15px;
+// }
 
 // Media
 
