@@ -5,8 +5,7 @@
 
   @include forSize(mintab) {
     padding-left: 0;
-    display: flex;
-    flex-direction: column;
+    @include columnFlexDirection();
     margin-left: auto;
     margin-right: auto;
   }
@@ -18,8 +17,7 @@
 
 .subscribe__label {
   @include forSize(minmob) {
-    display: flex;
-    justify-content: center;
+    @include verticalFlexCenter();
     padding-top: 10px;
     padding-bottom: 20px;
     @include fontLineWeightLetter(14, 16, bold, base);
@@ -28,9 +26,7 @@
   }
 
   @include forSize(mintab) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex(center);
     padding-top: 10px;
     padding-bottom: 20px;
     @include fontLineWeightLetter(14, 16, bold, base);
@@ -51,15 +47,13 @@
 
 .subscribe__row {
   @include forSize(minmob) {
-    display: flex;
+    @include alignFlexCenter();
     flex-direction: column;
-    align-items: center;
   }
 
   @include forSize(mintab) {
-    display: flex;
+    @include alignFlexCenter();
     flex-direction: column;
-    align-items: center;
   }
 
   @include forSize(minpc) {
@@ -77,7 +71,6 @@
     padding-bottom: 15px;
     padding-left: 16px;
     margin-bottom: 20px;
-    margin-right: 12px;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
