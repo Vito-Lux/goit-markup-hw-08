@@ -22,16 +22,7 @@
 }
 
 .our-team__list {
-  @include forSize(minmob) {
-    display: flex;
-    justify-content: center;
-  }
-
-  @include forSize(mintab) {
-    display: flex;
-    justify-content: center;
-  }
-
+  @include verticalFlexCenter();
   @include listFlexGap();
 }
 
@@ -43,10 +34,12 @@
       min-width: 450px;
       min-height: 460px;
     }
+
     @include forSize(mintab) {
       min-width: 354px;
       min-height: 374px;
     }
+
     @include forSize(minpc) {
       min-width: 270px;
       min-height: 260px;

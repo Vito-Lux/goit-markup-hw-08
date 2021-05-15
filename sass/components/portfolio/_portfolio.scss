@@ -1,9 +1,20 @@
 .portfolio__list {
   @include listFlexGap();
+
+  @include forSize(minmob) {
+    @include verticalFlexCenter();
+  }
+
+  @include forSize(mintab) {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 .portfolio__item {
   @include itemFlexGap(3);
+
+  max-height: 460px;
 
   @include transitionRules(box-shadow);
 
@@ -22,14 +33,31 @@
 .portfolio__overlay {
   position: relative;
   overflow: hidden;
+}
 
-  &-text {
+.portfolio__img {
+  min-height: 294px;
+
+  @include forSize(minmob) {
+    min-width: 450px;
+  }
+  @include forSize(mintab) {
+    min-width: 354px;
+  }
+  @include forSize(minpc) {
+    min-width: 270px;
+    min-height: 260px;
+  }
+}
+
+.portfolio__overlay-text {
+  @include forSize(minmob) {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 63px 24px;
+    padding: 77px 24px;
     @include fontLineWeightLetter(18, 28, norm, base);
     color: $main-bg-color;
     background-color: $accent-color;
@@ -40,6 +68,14 @@
 
     opacity: 0.9;
   }
+
+  @include forSize(mintab) {
+    padding: 49px 24px;
+  }
+
+  @include forSize(minpc) {
+    padding: 63px 24px;
+  }
 }
 
 .portfolio__item:hover .portfolio__overlay-text {
@@ -47,6 +83,10 @@
 }
 
 .portfolio-content {
+  @include forSize(minmob) {
+    padding: 20px 0 20px 24px;
+  }
+
   @include columnFlexDirection();
   justify-content: center;
   align-items: flex-start;

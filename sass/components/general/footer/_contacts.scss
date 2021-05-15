@@ -1,4 +1,9 @@
 .footer__address {
+  padding-bottom: 10px;
+  @include fontLineWeightLetter(14, 24, norm, base);
+  font-style: normal;
+  color: $main-bg-color;
+
   @include forSize(minmob) {
     @include centeredFlex(center);
     flex-direction: column;
@@ -6,31 +11,24 @@
   }
 
   @include forSize(minpc) {
-    display: flex;
-    flex-direction: column;
+    @include columnFlexDirection();
     align-items: flex-start;
     margin-bottom: 0;
   }
-
-  padding-bottom: 10px;
-  @include fontLineWeightLetter(14, 24, norm, base);
-  font-style: normal;
-  color: $main-bg-color;
 }
 
 .footer-contacts__item a {
+  @include fontLineWeightLetter(14, 24, norm, base);
+  color: $main-bg-color;
+
   @include forSize(minmob) {
     @include centeredFlex(center);
   }
 
   @include forSize(minpc) {
-    display: flex;
-    flex-direction: column;
+    @include columnFlexDirection();
     align-items: flex-start;
   }
-
-  @include fontLineWeightLetter(14, 24, norm, base);
-  color: $main-bg-color;
 
   @include transitionRules(color);
 

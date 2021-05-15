@@ -1,19 +1,16 @@
 .footer__logo {
+  margin-bottom: 20px;
+  font-family: $secondary-font;
+  color: $main-bg-color;
+
   @include forSize(minmob) {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-family: $secondary-font;
+    @include verticalFlexCenter();
     @include fontLineWeightLetter(24, 28, bold, base);
-    color: $main-bg-color;
   }
 
   @include forSize(minpc) {
     display: inline-block;
-    margin-bottom: 20px;
-    font-family: $secondary-font;
     @include fontLineWeightLetter(26, 31, bold, base);
-    color: $main-bg-color;
   }
 }
 

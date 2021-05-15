@@ -31,36 +31,27 @@
 }
 
 .footer-icons__text {
-  @include forSize(minmob) {
-    display: flex;
-    justify-content: center;
-  }
-
-  @include forSize(mintab) {
-    display: flex;
-    justify-content: center;
-  }
+  padding-top: 10px;
+  @include fontLineWeightLetter(14, 16, bold, base);
+  text-transform: uppercase;
+  color: $main-bg-color;
+  @include verticalFlexCenter();
 
   @include forSize(minpc) {
     display: flex;
     justify-content: flex-start;
   }
-
-  padding-top: 10px;
-  @include fontLineWeightLetter(14, 16, bold, base);
-  text-transform: uppercase;
-  color: $main-bg-color;
 }
 
 .footer-icons__list {
+  padding-top: 20px;
+
   @include forSize(minmob) {
-    padding-top: 20px;
     display: flex;
   }
 
   @include forSize(minpc) {
     @include alignFlexCenter();
-    padding-top: 20px;
   }
 }
 

@@ -1,11 +1,20 @@
 .header-nav {
-  @include alignFlexCenter();
+  @include forSize(mintab) {
+    @include alignFlexCenter();
+  }
 }
 
 .header-nav__logo {
-  margin-right: 92px;
-  font-family: $secondary-font;
-  @include fontLineWeightLetter(26, 31, bold, base);
+  @include forSize(minmob) {
+    margin-right: 70px;
+    font-family: $secondary-font;
+    @include fontLineWeightLetter(24, 28, bold, base);
+  }
+
+  @include forSize(minpc) {
+    margin-right: 92px;
+    @include fontLineWeightLetter(26, 31, bold, base);
+  }
 
   & span {
     color: $accent-color;
@@ -13,7 +22,13 @@
 }
 
 .header-nav__list {
-  display: flex;
+  @include forSize(minmob) {
+    display: none;
+  }
+
+  @include forSize(mintab) {
+    display: flex;
+  }
 }
 
 .header-nav__item:not(:last-child) {
@@ -41,11 +56,23 @@
 .header-nav__link:hover::after,
 .header-nav__link:focus::after,
 .current-link a::after {
-  content: "";
-  position: absolute;
-  top: 45px;
-  display: block;
-  height: 4px;
-  width: 100%;
-  background-color: $accent-color;
+  @include forSize(mintab) {
+    content: "";
+    position: absolute;
+    top: 50px;
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: $accent-color;
+  }
+
+  @include forSize(minpc) {
+    content: "";
+    position: absolute;
+    top: 45px;
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: $accent-color;
+  }
 }

@@ -11,17 +11,8 @@
 }
 
 .after-hero__list {
-  @include forSize(minmob) {
-    display: flex;
-    justify-content: center;
-  }
-
-  @include forSize(mintab) {
-    display: flex;
-    justify-content: center;
-  }
-
   @include listFlexGap();
+  @include verticalFlexCenter();
 }
 
 .after-hero__item {
@@ -29,24 +20,21 @@
 }
 
 .after-hero-img {
+  background-color: $button-bg-color;
+  max-height: 120px;
+
   @include forSize(minmob) {
-    background-color: $button-bg-color;
     max-width: 450px;
-    max-height: 120px;
     padding: 25px 192px;
   }
 
   @include forSize(mintab) {
-    background-color: $button-bg-color;
     max-width: 354px;
-    max-height: 120px;
     padding: 25px 144px;
   }
 
   @include forSize(minpc) {
-    background-color: $button-bg-color;
     max-width: 270px;
-    max-height: 120px;
     padding: 25px 100px;
   }
 }
@@ -57,21 +45,20 @@
 }
 
 .after-hero__subtitle {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  @include fontLineWeightLetter(14, 16, bold, base);
+  text-transform: uppercase;
+  color: $main-text-color;
+
   @include forSize(minmob) {
-    display: flex;
-    justify-content: center;
+    @include verticalFlexCenter();
   }
 
   @include forSize(mintab) {
     display: flex;
     justify-content: flex-start;
   }
-
-  padding-top: 30px;
-  padding-bottom: 10px;
-  @include fontLineWeightLetter(14, 16, bold, base);
-  text-transform: uppercase;
-  color: $main-text-color;
 }
 
 .after-hero__text {

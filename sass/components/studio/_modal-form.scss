@@ -19,12 +19,19 @@
 
 .modal__field {
   @include columnFlexDirection();
-  min-width: 448px;
   min-height: 40px;
   margin-top: 4px;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  @include forSize(minmob) {
+    min-width: 370px;
+  }
+
+  @include forSize(minpc) {
+    min-width: 448px;
+  }
 
   @include transitionRules(border, outline);
 
@@ -50,13 +57,20 @@
 
 .textarea {
   display: flex;
-  min-width: 448px;
   min-height: 120px;
   resize: none;
   margin-top: 4px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  @include forSize(minmob) {
+    min-width: 370px;
+  }
+
+  @include forSize(minpc) {
+    min-width: 448px;
+  }
 
   @include transitionRules(border, outline);
 
@@ -71,6 +85,14 @@
 .modal__agreement {
   @include verticalFlexCenter();
   padding-top: 25px;
+
+  @include forSize(minmob) {
+    @include fontLineWeightLetter(12, 14, norm, base);
+  }
+
+  @include forSize(minpc) {
+    @include fontLineWeightLetter(14, 24, norm, base);
+  }
 }
 
 .modal__agreement-label::before {

@@ -1,10 +1,7 @@
 .subscribe__form {
-  @include forSize(minmob) {
-    padding-left: 0;
-  }
+  padding-left: 0;
 
   @include forSize(mintab) {
-    padding-left: 0;
     @include columnFlexDirection();
     margin-left: auto;
     margin-right: auto;
@@ -16,45 +13,29 @@
 }
 
 .subscribe__label {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  color: $main-bg-color;
+  @include fontLineWeightLetter(14, 16, bold, base);
+
   @include forSize(minmob) {
     @include verticalFlexCenter();
-    padding-top: 10px;
-    padding-bottom: 20px;
-    @include fontLineWeightLetter(14, 16, bold, base);
-    text-transform: uppercase;
-    color: $main-bg-color;
   }
 
   @include forSize(mintab) {
     @include centeredFlex(center);
-    padding-top: 10px;
-    padding-bottom: 20px;
-    @include fontLineWeightLetter(14, 16, bold, base);
-    text-transform: uppercase;
-    color: $main-bg-color;
   }
 
   @include forSize(minpc) {
     display: inline-flex;
     justify-content: flex-start;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    @include fontLineWeightLetter(14, 16, bold, base);
-    text-transform: uppercase;
-    color: $main-bg-color;
   }
 }
 
 .subscribe__row {
-  @include forSize(minmob) {
-    @include alignFlexCenter();
-    flex-direction: column;
-  }
-
-  @include forSize(mintab) {
-    @include alignFlexCenter();
-    flex-direction: column;
-  }
+  @include alignFlexCenter();
+  flex-direction: column;
 
   @include forSize(minpc) {
     @include centeredFlex();
@@ -64,35 +45,26 @@
 }
 
 .subscribe__email {
+  min-height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @include fontLineWeightLetter(16, 20, norm, base);
+  color: rgba(255, 255, 255, 0.6);
+  background-color: $secondary-bg-color;
+
   @include forSize(minmob) {
     min-width: 450px;
-    min-height: 50px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 16px;
     margin-bottom: 20px;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    @include fontLineWeightLetter(16, 20, norm, base);
-    color: rgba(255, 255, 255, 0.6);
-    background-color: $secondary-bg-color;
   }
 
   @include forSize(minpc) {
     min-width: 358px;
-    min-height: 50px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 16px;
     margin-right: 12px;
     margin-bottom: 0;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    @include fontLineWeightLetter(16, 20, norm, base);
-    color: rgba(255, 255, 255, 0.6);
-    background-color: $secondary-bg-color;
   }
 }
 
@@ -103,11 +75,11 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 29px;
-  @include fontLineWeightLetter(16, 30, bold, base);
   text-transform: capitalize;
   border-radius: 4px;
   border: 1px solid rgba(33, 150, 243, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @include fontLineWeightLetter(16, 30, bold, base);
   background-color: $accent-color;
   color: $main-bg-color;
 
