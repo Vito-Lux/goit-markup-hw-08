@@ -1,8 +1,6 @@
 .after-hero {
-  @include forSize(minmob) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   @include forSize(minpc) {
     padding-top: 94px;
@@ -22,11 +20,8 @@
 .after-hero-img {
   background-color: $button-bg-color;
   max-height: 120px;
-
-  @include forSize(minmob) {
-    max-width: 450px;
-    padding: 25px 192px;
-  }
+  max-width: 450px;
+  padding: 25px 192px;
 
   @include forSize(mintab) {
     max-width: 354px;
@@ -50,10 +45,7 @@
   @include fontLineWeightLetter(14, 16, bold, base);
   text-transform: uppercase;
   color: $main-text-color;
-
-  @include forSize(minmob) {
-    @include verticalFlexCenter();
-  }
+  @include verticalFlexCenter();
 
   @include forSize(mintab) {
     display: flex;

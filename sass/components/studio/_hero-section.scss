@@ -1,12 +1,9 @@
 .hero {
+  background-image: $line-grad, url(../images/hero_mobile_img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-
-  @include forSize(minmob) {
-    background-image: $line-grad, url(../images/hero_mobile_img.jpg);
-    @include imgMedia() {
-      background-image: $line-grad, url(../images/hero_mobile_img@2x.jpg);
-    }
+  @include imgMedia() {
+    background-image: $line-grad, url(../images/hero_mobile_img@2x.jpg);
   }
 
   @include forSize(mintab) {
@@ -25,10 +22,8 @@
 }
 
 .hero .container {
-  @include forSize(minmob) {
-    padding-bottom: 118px;
-    padding-top: 118px;
-  }
+  padding-bottom: 118px;
+  padding-top: 118px;
 
   @include forSize(minpc) {
     max-width: 1600px;
@@ -42,16 +37,13 @@
 }
 
 .hero__title {
+  max-width: 360px;
   text-align: center;
   padding-bottom: 30px;
   color: $main-bg-color;
   font-family: $main-font;
   text-transform: uppercase;
-
-  @include forSize(minmob) {
-    max-width: 360px;
-    @include fontLineWeightLetter(26, 42, eb, dbl);
-  }
+  @include fontLineWeightLetter(26, 42, eb, dbl);
 
   @include forSize(minpc) {
     max-width: 696px;

@@ -18,10 +18,7 @@
   text-transform: uppercase;
   color: $main-bg-color;
   @include fontLineWeightLetter(14, 16, bold, base);
-
-  @include forSize(minmob) {
-    @include verticalFlexCenter();
-  }
+  @include verticalFlexCenter();
 
   @include forSize(mintab) {
     @include centeredFlex(center);
@@ -55,11 +52,8 @@
   @include fontLineWeightLetter(16, 20, norm, base);
   color: rgba(255, 255, 255, 0.6);
   background-color: $secondary-bg-color;
-
-  @include forSize(minmob) {
-    min-width: 450px;
-    margin-bottom: 20px;
-  }
+  min-width: 450px;
+  margin-bottom: 20px;
 
   @include forSize(minpc) {
     min-width: 358px;

@@ -1,7 +1,5 @@
 .header-button {
-   @include forSize(minmob) {
-      display: block;
-   }
+   display: block;
 
    @include forSize(mintab) {
       display: none;
@@ -14,23 +12,21 @@
 }
 
 .mobile-menu {
-   @include forSize(minmob) {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      @include columnFlexDirection();
-      justify-content: space-between;
-      padding-top: 48px;
-      padding-left: 40px;
-      background-color: $main-bg-color;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-      z-index: 1000;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   @include columnFlexDirection();
+   justify-content: space-between;
+   padding-top: 48px;
+   padding-left: 40px;
+   background-color: $main-bg-color;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+   z-index: 1000;
 
-      transform: translateX(100%);
-      @include transitionRules();
-   }
+   transform: translateX(100%);
+   @include transitionRules();
 
    @include forSize(mintab) {
       display: none;

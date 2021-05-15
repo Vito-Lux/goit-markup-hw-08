@@ -1,9 +1,6 @@
 .portfolio__list {
   @include listFlexGap();
-
-  @include forSize(minmob) {
-    @include verticalFlexCenter();
-  }
+  @include verticalFlexCenter();
 
   @include forSize(mintab) {
     display: flex;
@@ -37,10 +34,8 @@
 
 .portfolio__img {
   min-height: 294px;
+  min-width: 450px;
 
-  @include forSize(minmob) {
-    min-width: 450px;
-  }
   @include forSize(mintab) {
     min-width: 354px;
   }
@@ -51,23 +46,21 @@
 }
 
 .portfolio__overlay-text {
-  @include forSize(minmob) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 77px 24px;
-    @include fontLineWeightLetter(18, 28, norm, base);
-    color: $main-bg-color;
-    background-color: $accent-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 77px 24px;
+  @include fontLineWeightLetter(18, 28, norm, base);
+  color: $main-bg-color;
+  background-color: $accent-color;
 
-    @include transitionRules(transform);
+  @include transitionRules(transform);
 
-    transform: translateY(100%);
+  transform: translateY(100%);
 
-    opacity: 0.9;
-  }
+  opacity: 0.9;
 
   @include forSize(mintab) {
     padding: 49px 24px;
@@ -83,14 +76,10 @@
 }
 
 .portfolio-content {
-  @include forSize(minmob) {
-    padding: 20px 0 20px 24px;
-  }
-
   @include columnFlexDirection();
   justify-content: center;
   align-items: flex-start;
-  padding: 20px 24px;
+  padding: 20px 0 20px 24px;
   border: 1px solid $portfolio-border-color;
   border-radius: 0px 0px 4px 4px;
   background-color: $main-bg-color;

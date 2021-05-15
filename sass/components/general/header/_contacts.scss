@@ -1,7 +1,5 @@
 .header-contacts__list {
-  @include forSize(minmob) {
-    display: none;
-  }
+  display: none;
 
   @include forSize(mintab) {
     display: flex;

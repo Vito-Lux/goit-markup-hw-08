@@ -1,7 +1,5 @@
 .our-work .container {
-  @include forSize(minmob) {
-    display: none;
-  }
+  display: none;
 
   @include forSize(minpc) {
     display: block;

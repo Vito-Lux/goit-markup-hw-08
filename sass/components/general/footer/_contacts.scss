@@ -1,14 +1,11 @@
 .footer__address {
+  @include centeredFlex(center);
+  flex-direction: column;
+  margin-bottom: 60px;
   padding-bottom: 10px;
   @include fontLineWeightLetter(14, 24, norm, base);
   font-style: normal;
   color: $main-bg-color;
-
-  @include forSize(minmob) {
-    @include centeredFlex(center);
-    flex-direction: column;
-    margin-bottom: 60px;
-  }
 
   @include forSize(minpc) {
     @include columnFlexDirection();
@@ -18,12 +15,9 @@
 }
 
 .footer-contacts__item a {
+  @include centeredFlex(center);
   @include fontLineWeightLetter(14, 24, norm, base);
   color: $main-bg-color;
-
-  @include forSize(minmob) {
-    @include centeredFlex(center);
-  }
 
   @include forSize(minpc) {
     @include columnFlexDirection();

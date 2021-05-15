@@ -26,16 +26,17 @@
 }
 
 .our-clients__link {
+  @include forSize(maxmob) {
+    width: 100%;
+  }
+
+  width: 210px;
   @include centeredFlex(center);
   max-height: 92px;
   padding: 16px 32px;
   border: 1px solid $socials-main-color;
   border-radius: 4px;
   fill: $socials-main-color;
-
-  @include forSize(minmob) {
-    width: 210px;
-  }
 
   @include forSize(mintab) {
     width: 226px;

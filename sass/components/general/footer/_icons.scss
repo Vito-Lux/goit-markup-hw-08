@@ -1,8 +1,6 @@
 .footer__row {
-  @include forSize(minmob) {
-    @include centeredFlex(center);
-    flex-direction: column;
-  }
+  @include centeredFlex(center);
+  flex-direction: column;
 
   @include forSize(mintab) {
     display: flex;
@@ -21,9 +19,7 @@
 }
 
 .footer__right-block {
-  @include forSize(minmob) {
-    padding-left: 0;
-  }
+  padding-left: 0;
 
   @include forSize(minpc) {
     padding-left: 70px;
@@ -45,10 +41,7 @@
 
 .footer-icons__list {
   padding-top: 20px;
-
-  @include forSize(minmob) {
-    display: flex;
-  }
+  display: flex;
 
   @include forSize(minpc) {
     @include alignFlexCenter();
@@ -70,10 +63,7 @@
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   fill: $main-bg-color;
-
-  @include forSize(minmob) {
-    margin-bottom: 60px;
-  }
+  margin-bottom: 60px;
 
   @include forSize(minpc) {
     margin-bottom: 0;

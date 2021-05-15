@@ -3,10 +3,8 @@
 }
 
 .our-team .container {
-  @include forSize(minmob) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   @include forSize(minpc) {
     padding-top: 94px;
@@ -30,10 +28,8 @@
   @include itemFlexGap(4);
 
   & img {
-    @include forSize(minmob) {
-      min-width: 450px;
-      min-height: 460px;
-    }
+    min-width: 450px;
+    min-height: 460px;
 
     @include forSize(mintab) {
       min-width: 354px;

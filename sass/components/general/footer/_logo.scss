@@ -2,11 +2,8 @@
   margin-bottom: 20px;
   font-family: $secondary-font;
   color: $main-bg-color;
-
-  @include forSize(minmob) {
-    @include verticalFlexCenter();
-    @include fontLineWeightLetter(24, 28, bold, base);
-  }
+  @include verticalFlexCenter();
+  @include fontLineWeightLetter(24, 28, bold, base);
 
   @include forSize(minpc) {
     display: inline-block;

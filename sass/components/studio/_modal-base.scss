@@ -24,18 +24,15 @@
 }
 
 .modal__content {
+  position: relative;
+  max-width: 450px;
+  max-height: 609px;
+  padding-bottom: 40px;
+  margin-bottom: 5px;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: $main-bg-color;
   color: $main-text-color;
-
-  @include forSize(minmob) {
-    position: relative;
-    max-width: 450px;
-    max-height: 609px;
-    padding-bottom: 40px;
-    margin-bottom: 5px;
-  }
 
   @include forSize(minpc) {
     position: relative;

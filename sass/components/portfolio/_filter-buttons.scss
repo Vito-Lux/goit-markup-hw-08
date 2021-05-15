@@ -1,10 +1,8 @@
 .filter__list {
-  @include forSize(minmob) {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-  }
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 
   @include forSize(mintab) {
     @include centeredFlex();
@@ -14,10 +12,7 @@
 
 .filter__item:not(:last-child) {
   margin-right: 8px;
-
-  @include forSize(minmob) {
-    margin-bottom: 15px;
-  }
+  margin-bottom: 15px;
 
   @include forSize(mintab) {
     margin-bottom: 0;
