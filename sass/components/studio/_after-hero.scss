@@ -9,8 +9,8 @@
 }
 
 .after-hero__list {
-  @include listFlexGap();
   @include verticalFlexCenter();
+  @include listFlexGap();
 }
 
 .after-hero__item {
@@ -20,8 +20,11 @@
 .after-hero-img {
   background-color: $button-bg-color;
   max-height: 120px;
-  max-width: 450px;
-  padding: 25px 192px;
+
+  @include forSize(minmob) {
+    max-width: 450px;
+    padding: 25px 192px;
+  }
 
   @include forSize(mintab) {
     max-width: 354px;
