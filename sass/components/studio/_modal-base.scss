@@ -24,6 +24,11 @@
 }
 
 .modal__content {
+  @include forSize(maxmob) {
+    max-width: 318px;
+    max-height: 465px;
+  }
+
   position: relative;
   max-width: 450px;
   max-height: 609px;

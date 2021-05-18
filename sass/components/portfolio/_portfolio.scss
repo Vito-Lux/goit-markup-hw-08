@@ -33,6 +33,11 @@
 }
 
 .portfolio__img {
+  @include forSize(maxmob) {
+    min-width: 300px;
+    min-height: 230px;
+  }
+
   min-height: 294px;
   min-width: 450px;
 

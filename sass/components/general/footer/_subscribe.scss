@@ -55,6 +55,10 @@
   min-width: 450px;
   margin-bottom: 20px;
 
+  @include forSize(maxmob) {
+    min-width: 300px;
+  }
+
   @include forSize(minpc) {
     min-width: 358px;
     margin-right: 12px;

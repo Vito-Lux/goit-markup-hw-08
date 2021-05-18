@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 *,
@@ -15,6 +14,8 @@ body {
   font-family: $main-font;
   font-size: $font-standard-size;
   letter-spacing: $base-letter-spacing;
+
+  overflow-x: hidden;
 }
 
 h1,
@@ -57,15 +58,15 @@ button {
   padding-right: 15px;
 
   @include forSize(minmob) {
-    max-width: 480px;
+    width: 480px;
   }
 
   @include forSize(mintab) {
-    max-width: 768px;
+    width: 768px;
   }
 
   @include forSize(minpc) {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 

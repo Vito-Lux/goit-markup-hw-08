@@ -3,6 +3,14 @@
 }
 
 .modal__title {
+  @include forSize(maxmob) {
+    max-width: 240px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 15px 15px 3px 15px;
+    @include fontLineWeightLetter(16, 23, bold, base);
+  }
+
   padding: 40px 40px 6px 40px;
   @include fontLineWeightLetter(20, 23, bold, base);
   text-align: center;
@@ -18,6 +26,10 @@
 }
 
 .modal__field {
+  @include forSize(maxmob) {
+    min-width: 240px;
+  }
+
   @include columnFlexDirection();
   min-height: 40px;
   margin-top: 4px;
@@ -53,6 +65,11 @@
 }
 
 .textarea {
+  @include forSize(maxmob) {
+    min-width: 240px;
+    min-height: 60px;
+  }
+
   display: flex;
   min-height: 120px;
   resize: none;
@@ -77,6 +94,12 @@
 }
 
 .modal__agreement {
+  @include forSize(maxmob) {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-left: 30px;
+  }
+
   @include verticalFlexCenter();
   padding-top: 25px;
   @include fontLineWeightLetter(12, 14, norm, base);
@@ -118,6 +141,10 @@
 }
 
 .modal__btn {
+  @include forSize(maxmob) {
+    padding-top: 0;
+  }
+
   @include verticalFlexCenter();
   padding-top: 30px;
 }

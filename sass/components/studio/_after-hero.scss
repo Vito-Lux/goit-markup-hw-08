@@ -21,6 +21,11 @@
   background-color: $button-bg-color;
   max-height: 120px;
 
+  @include forSize(maxmob) {
+    max-width: 270px;
+    padding: 25px 100px;
+  }
+
   @include forSize(minmob) {
     max-width: 450px;
     padding: 25px 192px;
