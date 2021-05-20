@@ -1,4 +1,7 @@
 .hero {
+  padding-bottom: 118px;
+  padding-top: 118px;
+
   background-image: $line-grad, url(../images/hero_mobile_img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,6 +17,9 @@
   }
 
   @include forSize(minpc) {
+    max-width: 1600px;
+    padding-bottom: 200px;
+    padding-top: 200px;
     background-image: $line-grad, url(../images/hero_img.jpg);
     @include imgMedia() {
       background-image: $line-grad, url(../images/hero_img@2x.jpg);
@@ -21,25 +27,13 @@
   }
 }
 
-.hero .container {
-  padding-bottom: 118px;
-  padding-top: 118px;
-
-  @include forSize(minpc) {
-    max-width: 1600px;
-    padding-bottom: 200px;
-    padding-top: 200px;
-  }
-}
-
-.hero-text {
-  @include verticalFlexCenter;
-}
-
 .hero__title {
+  @include verticalFlexCenter;
+  margin-right: auto;
+  margin-left: auto;
   max-width: 360px;
-  text-align: center;
   padding-bottom: 30px;
+  text-align: center;
   color: $main-bg-color;
   font-family: $main-font;
   text-transform: uppercase;
@@ -51,12 +45,11 @@
   }
 }
 
-.hero-btn {
-  @include verticalFlexCenter;
-}
-
 .hero__button,
 .global-btn {
+  @include verticalFlexCenter;
+  margin-right: auto;
+  margin-left: auto;
   min-height: 50px;
   min-width: 200px;
   padding: 10px 32px;

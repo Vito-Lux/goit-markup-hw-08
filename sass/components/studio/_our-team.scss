@@ -3,12 +3,14 @@
 }
 
 .our-team .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @include forSize(minmob) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   @include forSize(minpc) {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -16,7 +18,7 @@
   text-align: center;
   @include fontLineWeightLetter(36, 42, bold, base);
   color: $main-text-color;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .our-team__list {

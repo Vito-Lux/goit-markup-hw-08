@@ -52,6 +52,10 @@
   }
 }
 
+.current-link a:visited {
+  color: $accent-color;
+}
+
 .header-nav__link:hover::after,
 .header-nav__link:focus::after,
 .current-link a::after {

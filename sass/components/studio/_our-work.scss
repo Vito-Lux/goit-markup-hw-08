@@ -9,7 +9,7 @@
 
 .our-work__title {
   text-align: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   @include fontLineWeightLetter(36, 42, bold, vert);
   color: $main-text-color;
 }
