@@ -1,4 +1,4 @@
-.our-work .container {
+.our-work {
   display: none;
 
   @include forSize(minpc) {
@@ -14,21 +14,23 @@
   color: $main-text-color;
 }
 
-.our-work__list {
+.our-work-list {
   @include listFlexGap();
+  margin-top: 0;
 }
 
-.our-work__item {
+.our-work-list__item {
   position: relative;
   @include itemFlexGap(3);
+  margin-top: 0;
 }
 
-.our-work__img {
+.our-work-list__img {
   min-width: 370px;
   min-height: 294px;
 }
 
-.our-work__text {
+.our-work-list__text {
   position: absolute;
   bottom: 0;
   display: block;
@@ -41,6 +43,6 @@
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.our-work__list li:last-child {
+.our-work-list li:last-child {
   margin-right: 0;
 }

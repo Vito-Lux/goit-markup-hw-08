@@ -8,18 +8,22 @@
   }
 }
 
-.after-hero__list {
+.after-hero-list {
   @include verticalFlexCenter();
   @include listFlexGap();
+  margin-top: 0;
 }
 
-.after-hero__item {
+.after-hero-list__item {
   @include itemFlexGap(4);
+  margin-top: 0;
 }
 
 .after-hero-img {
+  @include centeredFlex();
   background-color: $button-bg-color;
   max-height: 120px;
+  margin-bottom: 30px;
 
   @include forSize(maxmob) {
     max-width: 270px;
@@ -38,7 +42,7 @@
 
   @include forSize(minpc) {
     max-width: 270px;
-    padding: 25px 100px;
+    padding: 25px 0;
   }
 }
 
@@ -47,9 +51,8 @@
   min-width: 70px;
 }
 
-.after-hero__subtitle {
-  padding-top: 30px;
-  padding-bottom: 10px;
+.after-hero-list__subtitle {
+  margin-bottom: 10px;
   @include fontLineWeightLetter(14, 16, bold, base);
   text-transform: uppercase;
   color: $main-text-color;
@@ -61,11 +64,12 @@
   }
 }
 
-.after-hero__text {
+.after-hero-list__text {
   @include fontLineWeightLetter(14, 24, norm, base);
   color: $additional-text-color;
+  margin-bottom: 10px;
 }
 
-.after-hero__list li:last-child {
+.after-hero-list li:last-child {
   margin-right: 0;
 }

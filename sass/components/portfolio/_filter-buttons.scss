@@ -1,4 +1,4 @@
-.filter__list {
+.filter-list {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -10,7 +10,7 @@
   }
 }
 
-.filter__item:not(:last-child) {
+.filter-list__item:not(:last-child) {
   margin-right: 8px;
   margin-bottom: 15px;
 
@@ -19,11 +19,11 @@
   }
 }
 
-.filter__item:last-child {
+.filter-list__item:last-child {
   margin-right: 0;
 }
 
-.filter__button {
+.filter-list__button {
   min-height: 38px;
   min-width: 73px;
   padding: 6px 22px;

@@ -44,21 +44,21 @@
    color: $main-text-color;
 }
 
-.mobile-nav__item,
+.mobile-nav-list__item,
 .mobile-contacts__item {
    color: $main-text-color;
    text-decoration: none;
 }
 
-.mobile-nav__item:not(:last-child) {
-   padding-bottom: 32px;
+.mobile-nav-list__item:not(:last-child) {
+   margin-bottom: 32px;
 }
 
-.mobile-nav__item:last-child {
-   padding-bottom: 0;
+.mobile-nav-list__item:last-child {
+   margin-bottom: 0;
 }
 
-.mobile-nav__link {
+.mobile-nav-list__link {
    @include fontLineWeightLetter(40, 46, med, base);
    @include transitionRules(color);
 
@@ -102,7 +102,7 @@
    display: flex;
    flex-direction: row;
    justify-content: flex-start;
-   padding-bottom: 48px;
+   margin-bottom: 48px;
    color: $accent-color;
    @include fontLineWeightLetter(18, 22, med, base);
 
@@ -110,7 +110,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding-bottom: 20px;
+      margin-bottom: 20px;
       @include fontLineWeightLetter(18, 22, med, base);
    }
 }

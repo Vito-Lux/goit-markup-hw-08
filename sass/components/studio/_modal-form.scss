@@ -68,12 +68,14 @@
   @include forSize(maxmob) {
     min-width: 240px;
     min-height: 60px;
+    margin-bottom: 0;
   }
 
   display: flex;
   min-height: 120px;
   resize: none;
   margin-top: 4px;
+  margin-bottom: 25px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -96,12 +98,11 @@
 .modal__agreement {
   @include forSize(maxmob) {
     padding-top: 10px;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
     margin-left: 30px;
   }
 
   @include verticalFlexCenter();
-  padding-top: 25px;
   @include fontLineWeightLetter(12, 14, norm, base);
 
   @include forSize(minpc) {
@@ -129,8 +130,13 @@
 }
 
 .modal__agreement-label {
+  @include forSize(maxmob) {
+    margin-bottom: 0;
+  }
+
   display: inline-flex;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .modal__agreement-link {
@@ -142,9 +148,9 @@
 
 .modal__btn {
   @include forSize(maxmob) {
-    padding-top: 0;
+    // padding-top: 0;
   }
 
   @include verticalFlexCenter();
-  padding-top: 30px;
+  // padding-top: 30px;
 }

@@ -14,20 +14,20 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: baseline;
   }
 }
 
 .footer__right-block {
-  padding-left: 0;
+  margin-left: 0;
 
   @include forSize(minpc) {
-    padding-left: 70px;
+    margin-left: 70px;
   }
 }
 
 .footer-icons__text {
-  padding-top: 10px;
+  margin-bottom: 20px;
   @include fontLineWeightLetter(14, 16, bold, base);
   text-transform: uppercase;
   color: $main-bg-color;
@@ -39,8 +39,7 @@
   }
 }
 
-.footer-icons__list {
-  padding-top: 20px;
+.footer-icons-list {
   display: flex;
 
   @include forSize(minpc) {
@@ -48,15 +47,15 @@
   }
 }
 
-.footer-icons__item:not(:last-child) {
-  padding-right: 10px;
+.footer-icons-list__item:not(:last-child) {
+  margin-right: 10px;
 }
 
-.footer-icons__item:last-child {
+.footer-icons-list__item:last-child {
   margin-right: 0;
 }
 
-.footer-icons__link {
+.footer-icons-list__link {
   @include centeredFlex();
   width: 44px;
   height: 44px;
@@ -79,7 +78,7 @@
   }
 }
 
-.footer-icons__img {
+.footer-icons-list__img {
   width: 20px;
   height: 20px;
 }

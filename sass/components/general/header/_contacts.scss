@@ -56,8 +56,6 @@
   @include reverseFlex();
 
   &-svg {
-    min-width: 16px;
-    min-height: 12px;
     margin-right: 10px;
   }
 }
@@ -66,8 +64,6 @@
   @include reverseFlex();
 
   &-svg {
-    min-width: 10px;
-    min-height: 16px;
     margin-right: 10px;
   }
 }

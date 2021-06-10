@@ -78,3 +78,7 @@ button {
 .visually-hidden {
   @extend %visually-hidden;
 }
+
+.current-link a:visited {
+  color: $accent-color;
+}

@@ -1,9 +1,9 @@
 .header {
   border-bottom: 1px solid $header-border-color;
+}
 
-  & .container {
-    @include spacedFlex();
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
+.header-container {
+  @include spacedFlex();
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
